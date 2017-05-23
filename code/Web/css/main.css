@@ -6,6 +6,9 @@ body {
 	background-color: #E6EBED;
 	font-family: "微软雅黑";
 }
+h3 {
+	display: inline-block;
+}
 
 /***bootstrap 样式覆盖**/
 .main .navbar { margin-bottom: 0px ; border:none;min-height:40px; border-radius: 0px ; background-color:#05364B;}
@@ -75,7 +78,6 @@ body {
 .main .content .content-right  {
 	display: inline-block;
 	float: left;
-	background-color: #fff;
 	padding: 5px;
 }
 .main .content .content-left {
@@ -86,8 +88,70 @@ body {
 	margin-left: 20px;
 }
 
-/***媒体查询***/
+.main .content .list-item {
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+.main .content .list-item .item-top {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.main .content .list-item .item-top .flag {
+	background-color: #D90239;
+	line-height: 25px;
+	text-align: center;
+	display: inline-block;
+	padding: 0px 15px ;	
+	color: #fff ;
+	margin-left: 10px;
+}
+.main .content .list-item .item-top h3 {
+	margin-left: 15px;
+	font-size: 22px;
+	vertical-align: middle;
+	color: #1b8b48;
+}
+.main .content .list-item .item-top .author {
+	float: right;
+	line-height: 25px;
+	color: #777777 ;
+	text-align: center;
+	display: inline-block;
+	padding: 0 10px ;
+	font-size: 12px;
+}
+.main .content .list-item .item-content {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+}
+.main .content .list-item .item-content img {
+	width: 120px;
+	height: 90px;
+	display: inline-block;
+}
+.main .content .list-item .item-content span {
+	width: calc(100% - 120px );
+	display: inline-block;
+	float:right;
+	padding: 5px 15px;
+	color: #777777;
+}
+.main .content .list-item .item-bottom {
+	color: #777777 ;
+	font-size: 12px;
+	display: inline-block;
+	width: 100%;
+	padding-right: 5px;
+}
+.main .content .list-item .item-bottom span {
+	display: inline-block;
+	padding: 0px 5px;
+	line-height: 25px;
+	float: right;
+}
 
+/***媒体查询***/
 @media (min-width: 768px)  {
 	.main .navbar-nav > li > a {
 		padding-top:10px;
