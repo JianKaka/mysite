@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width-device-width , initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--引入 bootstrap -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/main.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<title>首页</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 			<div class='header-top'>
 				<h4>CHANGE THE WORLD CODE</h4>
 			</div>
-			<div class='header-nav'>
+			<nav class="navbar navbar-default" role="navigation">
 				<ul class="nav navbar-nav">
 					<li class="active"><a>文章</a></li>
 					<li><a>个人作品</a></li>
@@ -29,7 +29,7 @@
 						</span>
 					</div>
 				</div>
-			</div>
+			</nav>
 			<div class='header-notify'>
 				<span>这是一条通知消息</span>
 				<a>登录</a>
@@ -41,8 +41,10 @@
 			<div class='content-right'></div>
 		</div>
 	</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery-2.2.1.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
