@@ -42,10 +42,66 @@
 		</div>
 		<div class='content'>
 			<div class='content-left'>
+				<!--轮播图-->
+				<div id='myCarousel' class='carousel slide' data-ride='carousel'>
+					<ol class='carousel-indicators'>
+						<li data-target='#myCarousel' data-slide-to='0' class='active'>
+							<img src='images/1.png'>
+						</li>
+						<li data-target='#myCarousel' data-slide-to='1'>
+							<img src='images/2.png'>
+						</li>
+						<li data-target='#myCarousel' data-slide-to='2'>
+							<img src='images/3.png'>
+						</li>
+						<li data-target='#myCarousel' data-slide-to='3'>
+							<img src='images/4.png'>
+						</li>
+					</ol>
+					<div class='carousel-inner'>
+						<div class='item active'>
+							<img src='images/1.png' alt='java'>
+						</div>
+						<div class='item'>
+							<img src='images/2.png' alt='ios'>
+						</div>
+						<div class='item'>
+							<img src='images/3.png' alt='php'>
+						</div>
+						<div class='item'>
+							<img src='images/4.png' alt='go'>
+						</div>
+					</div>
+				</div>
 				<item-component></item-component>
 			</div>
 			<div class='content-right'>
-				右侧栏
+				<div class='right-card'>
+					<span class='card-title'>广告</span>
+					<div>
+						这里是一条图片广告
+					</div>
+				</div>
+				<div class='right-card'>
+					<span class='card-title'>相关文章</span>
+					<ul>
+						<li>java进阶教程</li>
+						<li>android内存优化方案</li>
+						<li>python爬虫教程</li>
+						<li>《第一行代码》从零开始带你走进奇异的世界</li>
+						<li>js实现轮播图效果</li>
+						<li>H5小游戏实战教程</li>
+					</ul>
+				</div>
+				<div class='right-card'>
+					<span class='card-title'>友情链接</span>
+					<div class='friend-link'>
+						<a>慕课网</a>
+						<a>Github</a>
+						<a>极客网</a>
+						<a>GrepCode</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class='footer'>
