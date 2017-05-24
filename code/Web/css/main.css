@@ -9,9 +9,18 @@ body {
 h3 {
 	display: inline-block;
 }
-
+a {
+	color: #aaa;
+}
+a:hover {
+	color: #aaa ;
+	cursor: pointer;
+}
+.main {
+	position: relative;
+}
 /***bootstrap 样式覆盖**/
-.main .navbar { margin-bottom: 0px ; border:none;min-height:40px; border-radius: 0px ; background-color:#05364B;}
+.main .navbar { width:1000px ; margin:0 auto;border:none;min-height:40px; border-radius: 0px ; background-color:#05364B;}
 .main .navbar-default .navbar-nav > li >a {
 	color:#fff;
 	font-size: 16px;
@@ -36,7 +45,6 @@ h3 {
 }
 .main .nav-wrapper {
 	background-color: #05364B ;
-	padding: 0 60px;
 	position: relative;
 }
 
@@ -54,14 +62,16 @@ h3 {
 	background-color: #fff;
 	line-height: 30px;
 }
+.main .notify-box {
+	width: 1000px;
+	margin: 0 auto ;
+}
 .main .header-notify span {
-	padding-left: 60px;
 	color: #666666;
 }
 .main .header-notify .login {
 	display: inline-block;
 	float: right;
-	margin-right:50px; 
 }
 
 .main .header-notify .login a {
@@ -70,22 +80,23 @@ h3 {
 }
 
 .main .content {
-	padding: 0 60px;
+	width: 1000px;
+	margin: 0 auto ;
 	margin-top: 10px;
 }
 
 .main .content .content-left ,
 .main .content .content-right  {
 	display: inline-block;
-	float: left;
 	padding: 5px;
 }
 .main .content .content-left {
-	width: 70%;
+	width: 700px;
 }
 .main .content .content-right {
-	width: calc(100% - 70% - 20px);
+	width: 280px;
 	margin-left: 20px;
+	float: right;
 }
 
 .main .content .list-item {
@@ -151,6 +162,21 @@ h3 {
 	float: right;
 }
 
+.main .footer {
+	background-color: #333;
+	position: relative;
+	border-top: 4px solid  #02b74f ;
+}
+.main .footer .footer-inner {
+	max-width: 900px;
+	padding: 16px 20px;
+	margin: 0 auto;
+	color: #aaa ;
+	text-shadow:0 -1px 0 #333;
+}
+.main .footer .footer-inner .copyright {
+	text-align: center;
+}
 /***媒体查询***/
 @media (min-width: 768px)  {
 	.main .navbar-nav > li > a {
@@ -160,6 +186,9 @@ h3 {
 }
 
 @media (max-width: 768px) {
+	.main .navbar {
+		width: 100%;
+	}
 	.main .navbar-nav {
 		margin: 0;
 	}
@@ -168,16 +197,22 @@ h3 {
 	}
 	.main .nav-wrapper .navbar .header-search {
 		width: 100%;
+		top: 0px;
 		position: relative;
-		margin-bottom: 5px;
 	}
 	.main .header-notify span {
 		padding-left: 5px;
 		color: #666666;
 	}
+	
+	.main .header-notify .login {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
 
 	.main .content {
-		padding: 0;
+		width: 100%;
 		margin-top: 10px;
 	}
 	.main .content .content-left {
