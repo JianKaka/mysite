@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+</head>
+<body>
+	<div id='main' v-for='item in list'>
+		<comp :obj='item' :pos='$index'></comp>
+	</div>
+	
+<script src="js/vue.js"></script>
+<script>
+	
+	Vue.component ('comp' , {
+		props:{
+			 obj:{
+		      	 type: Object,
+		      	 default: function () {
+		        	return {title:'默认标题' , time:'默认时间' , num:0}
+		        }
+		     },
+		     pos:{
+	       		type:Number,
+	       		default: 0
+		     }
+		},
+		template:'<div>{{obj.title}} : {{obj.time}} <button v-on:click="addOne(obj.num , pos)">{{obj.num}}</button></div>',
+		methods:{
+			addOne:function (n , index) {
+				vm.$data.list[index].num +=1 ;
+			}
+		}
+	})
+
+	var vm = new Vue({
+		el:'#main',
+		data:{
+			list:[
+				{title:'title1' , time:'2017-05-15' , num:1},
+				{title:'title2' , time:'2017-05-15' , num:2},
+				{title:'title3' , time:'2017-05-15' , num:3},
+				{title:'title4' , time:'2017-05-15' , num:4},
+				{title:'title5' , time:'2017-05-15' , num:5}
+			]
+		}
+	})
+</script>
+</body>
+</html>

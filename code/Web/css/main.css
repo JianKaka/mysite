@@ -19,6 +19,7 @@ a:hover {
 ul , li {
 	list-style: none;
 }
+
 .main {
 	position: relative;
 	overflow-x: hidden;
@@ -170,7 +171,11 @@ ul , li {
 	margin-left: 15px;
 	font-size: 22px;
 	vertical-align: middle;
-	color: #1b8b48;
+	color: #11A54C;
+}
+.main .content .list-item .item-top h3:hover {	
+	cursor: pointer;
+	color: #0F582D;
 }
 .main .content .list-item .item-top .author {
 	float: right;
@@ -249,6 +254,59 @@ ul , li {
 .main .content .content-right .right-card .friend-link a{
 	display: inline-block;
 	padding: 8px 5px;
+}
+
+/*********足迹**********/
+.main .content .travels {
+	margin-left: 10px ; 
+	display: inline-block;
+	height: 190px;
+	float: left;
+}
+.main .content .travels .time-line {
+	background-color: #fff;
+	width: 4px;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+.main .content .travels .time-line-inner {
+	width: 2px;
+	height: 100%;
+	margin:0 auto;
+	background-color: green;
+}
+.main .content .travels .time-pointer {
+	position: absolute;
+	top: 15px;
+	left: -4px;
+	width: 12px;
+	height:12px;
+	border-radius: 6px;
+	background-color: green;
+	border:2px solid #fff;
+	display: inline-block;
+}
+.main .content .travels .time-content {
+	margin-left: 15px;
+	float: left;
+}
+.main .content .travels .time-content p {
+	margin-top: 12px;
+	color: #aaa;
+}
+.main .content .travels .time-content-inner {
+	background-color: #fff;
+	padding: 10px;
+}
+.main .content .travels .time-content-inner h4 {
+	margin-bottom: 10px;
+}	
+.main .content .travels .img-wrapper img {
+	width: 160px;
+	height: 100px;
+	display: inline-block;
+	margin-right: 10px;
 }
 /***媒体查询***/
 @media (min-width: 768px)  {
