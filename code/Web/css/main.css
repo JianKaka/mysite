@@ -260,7 +260,7 @@ ul , li {
 .main .content .travels {
 	margin-left: 10px ; 
 	display: inline-block;
-	height: 190px;
+	height: 240px;
 	float: left;
 }
 .main .content .travels .time-line {
@@ -303,8 +303,8 @@ ul , li {
 	margin-bottom: 10px;
 }	
 .main .content .travels .img-wrapper img {
-	width: 160px;
-	height: 100px;
+	width: 200px;
+	height: 150px;
 	display: inline-block;
 	margin-right: 10px;
 }

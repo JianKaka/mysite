@@ -49,16 +49,16 @@
 				<div id='myCarousel' class='carousel slide' data-ride='carousel' v-show='isShow'>
 					<ol class='carousel-indicators'>
 						<li data-target='#myCarousel' data-slide-to='0' class='active'>
-							<img src='images/1.png'>
+							<img src='images/1.png'  alt='java'>
 						</li>
 						<li data-target='#myCarousel' data-slide-to='1'>
-							<img src='images/2.png'>
+							<img src='images/2.png'  alt='java'>
 						</li>
 						<li data-target='#myCarousel' data-slide-to='2'>
-							<img src='images/3.png'>
+							<img src='images/3.png'  alt='java'>
 						</li>
 						<li data-target='#myCarousel' data-slide-to='3'>
-							<img src='images/4.png'>
+							<img src='images/4.png'  alt='java'>
 						</li>
 					</ol>
 					<div class='carousel-inner'>
@@ -77,11 +77,12 @@
 					</div>
 				</div>
 				<!--内容列表-->
-				<div v-for='item in travels'>
-					<list-item :item='item' v-if='isShow'></list-item> 
-					<travels-item :travels='item' v-else='isShow'></travels-item> 
+				<div v-for='item in list'>
+					<list-item :item='item' :key='item.id' v-if='isShow'></list-item> 
+					<travels-item :travels='item' :key='item.id' v-else></travels-item> 
 				</div>
 			</div>
+			<!--右侧栏-->
 			<aside class='content-right'>
 				<div class='right-card'>
 					<span class='card-title'>广告</span>
@@ -111,6 +112,7 @@
 				</div>
 			</aside>
 		</section>
+		<!--底部-->
 		<footer class='footer'>
 			<div class='footer-inner'>
 				<div class='copyright'>
@@ -129,23 +131,10 @@
 <script src="components/comps.js"></script>
 
 <script>
-
-	new ListItem('list-item');
-	new TravelsItem('travels-item');
 	
-	new Vue({
-		el:'.main',
-		data:{
-			isShow:false,
-			navText:[
-				{text:'文章' , type:0 , isActive:true},
-				{text:'个人作品' , type:1 , isActive:false},
-				{text:'足迹' , type:2 , isActive:false},
-				{text:'关于我' , type:3 , isActive:false}
-			],
-			preNavIndex:0,
-			articles:[
-				{
+	var articles = [
+				{	
+					id:'001',
 					flag:'JAVA' , 
 					title:'Java高级编程第一讲' , 
 					imgurl:'', 
@@ -157,6 +146,7 @@
 					summary:'这是一本不错的java初级教程，它能够带你走进java的世界，带你领略编程的乐趣，通过简单的代码，就能够实现强大的功能' 
 				},
 				{
+					id:'002',
 					flag:'ANDROID' , 
 					title:'Android高级编程第一讲' , 
 					imgurl:'', 
@@ -168,6 +158,7 @@
 					summary:'这是一本不错的java初级教程，它能够带你走进java的世界，带你领略编程的乐趣，通过简单的代码，就能够实现强大的功能' 
 				},
 				{
+					id:'003',
 					flag:'PHP' , 
 					title:'PHP高级编程第一讲' , 
 					imgurl:'', 
@@ -179,6 +170,7 @@
 					summary:'这是一本不错的java初级教程，它能够带你走进java的世界，带你领略编程的乐趣，通过简单的代码，就能够实现强大的功能' 
 				},
 				{
+					id:'004',
 					flag:'IOS' , 
 					title:'IOS高级编程第一讲' , 
 					imgurl:'', 
@@ -190,6 +182,7 @@
 					summary:'这是一本不错的java初级教程，它能够带你走进java的世界，带你领略编程的乐趣，通过简单的代码，就能够实现强大的功能' 
 				},
 				{
+					id:'005',
 					flag:'Python' , 
 					title:'Python高级编程第一讲' , 
 					imgurl:'', 
@@ -200,33 +193,59 @@
 					author:'Mr.King',
 					summary:'这是一本不错的java初级教程，它能够带你走进java的世界，带你领略编程的乐趣，通过简单的代码，就能够实现强大的功能' 
 				},
-			],
-			travels:[
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
-				{title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]}
 			]
+			
+	var travels = [
+				{id:'001', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'002', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'003', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'004', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'005', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'006', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'007', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]},
+				{id:'008', title:'杭州-西湖 2日游' , time:'2017-05-14' , place:'杭州-西湖' , weather:'晴' , urls:[]}
+			]
+
+	new ListItem('list-item');
+	new TravelsItem('travels-item');
+	
+	new Vue({
+		el:'.main',
+		data:{
+			isShow:true,
+			navText:[
+				{text:'文章' , type:0 , isActive:true},
+				{text:'个人作品' , type:1 , isActive:false},
+				{text:'足迹' , type:2 , isActive:false},
+				{text:'关于我' , type:3 , isActive:false}
+			],
+			preNavIndex:0,
+			list:[]
+		},
+		created:function () {
+			this.list = articles ;
 		},
 		methods:{
 			/**
-			 * 切换导航
+			 * 切换导航	
 		     */
 			switchNav:function (type , currNavIndex) {
-				this.navText[this.preNavIndex].isActive = false;
+				this.navText[this.preNavIndex].isActive = false ;
 				this.navText[currNavIndex].isActive = true ;
 				this.preNavIndex = currNavIndex ;
 				this.loadDataByType(type) ;
 			},
-			/**
+			/**	
 			 * 根据菜单类型，加载数据
 			 */
 			loadDataByType:function (type) {
-				
+				if(type == 0) {
+					this.list = articles ;
+					this.isShow = true ;
+				} else if(type == 2) {
+					this.list = travels ;
+					this.isShow = false ;
+				}
 			}
 		}
 	})
