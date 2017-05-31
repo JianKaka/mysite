@@ -8,29 +8,12 @@
 	<link href="css/main.css" rel="stylesheet">
 	<title>关于我</title>
 	<style>
-		.me .nav-tabs {
-			top:0;
-			border-bottom: none;
-			width: 140px;
+		.me {
+			width: 1000px ;
+			margin:0 auto;
+			background-color: #fff;
 		}
-		
-		.me .nav>li>a {
-			padding: 3px 20px;
-		}
-		.me .nav-tabs>li>a {
-			border-radius:0;
-			border:none;
-		}
-		.me .nav-tabs>li.active>a {
-			border:none;
-			color: #0F95CE;
-			background-color: transparent;
-		}
-		.me .nav-tabs>li>a:hover {
-			color: #0F95CE;
-			background-color: transparent;
-		}
-		.me .row .nav-title {
+		.me h2 {
 			border-left: 3px solid  #05A333 ;
 			font-size: 1.25em;
 			line-height: 40px;
@@ -42,212 +25,114 @@
 			margin-bottom: 10px;
 			background-color: #E2F0E6;
 		}
-		.me .row .section-wrapper {
-			padding: 5px  15px;
+		.me .introduce ,
+		.me .skill 	{
+			padding-top: 25px;
+			padding-bottom: 40px;
 		}
-		.white-bg {
-			background-color: #fff;
+		.me .introduce .header-icon {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto ;
+			display: block;
 		}
-		.no-padding {
-			padding: 0 0 ;
+		.me .introduce>p {
+			text-align: center;
+			line-height: 55px;
+			font-size: 1.05em ;
+			margin: 0;
 		}
-		@media (min-width: 1200px) {
-			.container {
-				width: 1000px;
-			}
+		.me .introduce .info {
+			width:500px;
+			margin:  0 auto ;
+			text-align: center;
+			display:block;
+			font-size: 1.05em;
+			line-height: 40px;
+		}
+		
+		.me .skill .skill-inner {
+			width: 560px;
+			margin: 0 auto ;
+			margin-top: 20px; 
+		}
+		.me .skill .skill-inner .skill-label {
+			width: 100px;
+			text-align: center;
+			line-height: 25px;
+			display: inline-block;
+			color: #666;
+			vertical-align: middle;
+		}
+		.me .skill .skill-inner .skill-bar-bg {
+			width: 440px;
+			height: 25px;
+			display: inline-block;
+			background-color: #d3d3d3;
+			position: relative;
+			vertical-align: middle;
+		}
+		.me .skill .skill-inner .skill-bar {
+			position: absolute;
+			height: 100%;
+			background-color: green;
+		}
+		.me .skill .skill-inner .skill-percent {
+			float: right;
+			line-height: 25px;
+			display: inline-block;
+			color: #fff;
+			padding: 0px 5px;
+		}
+		.me .contact {
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 40px;
+		}
+		.me .contact img {
+			width: 80px;
+			height: 80px;
+			display: inline-block;
+		}
+		.ml-20 {
+			margin-left: 20px;
 		}
 	</style>
 </head>
-<body data-spy="scroll" data-target="#myScrollspy">
+<body>
     <section class="me">
-    	<div class="container">
-    		<h1 style="line-height:100px ; background:green;">hello world</h1>
-			<div class="row">
-				<div class="col-xs-9 no-padding white-bg">
-					<h2 id="section-1" class="nav-title">基本信息</h2>
-					<div class="section-wrapper">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-					</div>
-					<h2 id="section-2" class="nav-title">教育经历</h2>
-					<div class="section-wrapper"> 
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-					</div>
-					<h2 id="section-3" class="nav-title">职业技能</h2>
-					<div class="section-wrapper"> 
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Integer faucibus ligula.
-					</div>
-					<h2 id="section-4" class="nav-title">赞助</h2>
-					<div class="section-wrapper"> 
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, 
-						varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, 
-						semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque 
-						non non purus. Suspendisse varius nibh non aliquet sagittis. 
-						In tincidunt orci sit amet elementum vestibulum. 
-						Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla.
-						Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. 
-						Integer aliquet quam ut elit suscipit, id interdum neque porttitor. 
-						Integer faucibus ligula.
-					</div>
+
+    	<h2>个人简介</h2>
+    	<div class='introduce'>
+    		<img src='images/1.png' class="img-circle header-icon">
+    		<p>胡文凯 King</p>
+    		<span class="info">
+    		爱旅游，喜欢游玩大自然的山和水，有古典的文化气息的地方；
+    		爱运动，喜欢锻炼，健身，爬山，看见坡想上；
+    		喜欢观察，感受生活！
+    		</span>
+    	</div>
+    	
+    	<h2>职业技能</h2>
+    	<div class='skill'>
+    		<div class='skill-inner' v-for='item in list'>
+    			<span class='skill-label'>{{item.text}}</span>
+    			<div class="skill-bar-bg">
+	    			<div class="skill-bar" v-bind:style={width:item.percent+'%'}>
+	    				<span class='skill-percent'>{{item.percent}}%</span>
+	    			</div>
 				</div>
-				<div class="col-xs-3" id="myScrollspy">
-					<ul class="nav nav-tabs nav-stacked white-bg" data-spy="affix" data-offset-top="100">
-						<li class="active"><a href="#section-1">基本信息</a></li>
-						<li><a href="#section-2">教育经历</a></li>
-						<li><a href="#section-3">职业技能</a></li>
-						<li><a href="#section-4">赞助</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    		</div>
+    	</div>
+    	
+    	<h2>与我联系</h2>
+    	<div class='contact'>
+    		<img src='images/1.png'  class='img-circle'  alt='QQ'>
+    		<img src='images/2.png'  class='img-circle ml-20'  alt='github'>
+    		<img src='images/3.png'  class='img-circle ml-20'  alt='weibo'>
+    		<img src='images/4.png'  class='img-circle ml-20'  alt='facebook'>
+    		<img src='images/1.png'  class='img-circle ml-20'  alt='email'>
+    	</div>
     </section>
 	
 
@@ -258,8 +143,19 @@
 <!-- 引入Vue.js 用来交互-->
 <script src="js/vue.js"></script>
 <script>
-	$(document).ready(function () {
-		
+	var skill = [
+		{text:'Java' , percent:90},
+		{text:'Android' , percent:85},
+		{text:'JavaScript' , percent:80},
+		{text:'HTML/CSS' , percent:70},
+		{text:'PHP' , percent:30},
+		{text:'MySQL' , percent:60}
+	]
+	new Vue({
+		el:'.me' ,
+		data:{
+			list:skill
+		}
 	})
 </script>
 </body>
