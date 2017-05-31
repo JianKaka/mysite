@@ -10,7 +10,8 @@ ul , li {list-style: none;}
 
 .img-ml-mr {margin:0 12px;}
 .ml-15 {margin-left: 15px;}
-
+.mt-10 {margin-top: 10px;}
+.mb-10 {margin-top: 10px;}
 
 .main {
 	position: relative;
@@ -301,7 +302,53 @@ ul , li {list-style: none;}
 	display: inline-block;
 	border:none;
 }
+/****关于我*****/
 
+.me .nav-tabs {
+	width: 140px;
+	top:0;
+	border-bottom: none;
+}
+.me .nav>li>a {
+	padding: 3px 20px;
+}
+.me .nav-tabs>li>a {
+	border-radius:0;
+	border:none;
+}
+.me .nav-tabs>li.active>a {
+	border:none;
+	color: #0F95CE;
+	background-color: transparent;
+}
+.me .nav-tabs>li>a:hover {
+	color: #0F95CE;
+	background-color: transparent;
+}
+.me .row .nav-title {
+	border-left: 3px solid  #05A333 ;
+	font-size: 1.25em;
+	line-height: 40px;
+	padding-left: 15px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	margin-left:-3px;
+	background-color: #E2F0E6;
+}
+.me .row .section-wrapper {
+	padding: 5px  15px;
+}
+.white-bg {
+	background-color: #fff;
+}
+.no-padding {
+	padding: 0 0 ;
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1000px;
+	}
+}
 /***媒体查询***/
 @media (min-width: 768px)  {
 	.main .navbar-nav > li > a {
