@@ -55,13 +55,13 @@
 							"<div class='time-line-inner'></div>"+
 							"<span class='time-pointer'></span>"+
 						"</div>"+
-						"<div class='time-content'>"+
+						"<div class='time-content ml-15'>"+
 							"<p>{{travels.time + travels.place + travels.weather}}</p>"+
 							"<div class='time-content-inner'>"+
 								"<h4>{{travels.title}}</h4>"+
 								"<div class='img-wrapper'>"+
 									"<img class='img-thumbnail'>"+
-									"<img class='img-thumbnail'>"+
+									"<img class='img-thumbnail img-ml-mr'>"+
 									"<img class='img-thumbnail'>"+
 								"</div>"+
 							"</div>"+

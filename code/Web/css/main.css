@@ -2,23 +2,15 @@ html , body ,h1 , h2 , h3 , h4 , h5  , ul , li {
 	padding: 0 ;
 	margin: 0 ;
 }
-body {
-	background-color: #E6EBED;
-	font-family: "微软雅黑";
-}
-h3 {
-	display: inline-block;
-}
-a {
-	color: #aaa;
-}
-a:hover {
-	color: #aaa ;
-	cursor: pointer;
-}
-ul , li {
-	list-style: none;
-}
+body {background-color: #E6EBED;font-family: "微软雅黑";}
+h3 {display: inline-block;}
+a{color: #aaa;}
+a:hover {color: #aaa ;cursor: pointer;}
+ul , li {list-style: none;}
+
+.img-ml-mr {margin:0 12px;}
+.ml-15 {margin-left: 15px;}
+
 
 .main {
 	position: relative;
@@ -31,7 +23,7 @@ ul , li {
 	font-size: 16px;
 }
 .main .navbar-default .navbar-nav > li >a:hover ,
-.main .navbar-default .navbar-nav>.active>a {
+.main .navbar-default .navbar-nav>.active > a {
 	color: #fff;
 	background-color:#EF4502;
 	cursor: pointer;
@@ -260,15 +252,14 @@ ul , li {
 .main .content .travels {
 	margin-left: 10px ; 
 	display: inline-block;
-	height: 240px;
 	float: left;
+	position: relative;
 }
 .main .content .travels .time-line {
 	background-color: #fff;
 	width: 4px;
 	height: 100%;
-	position: relative;
-	float: left;
+	position: absolute;
 }
 .main .content .travels .time-line-inner {
 	width: 2px;
@@ -287,27 +278,30 @@ ul , li {
 	border:2px solid #fff;
 	display: inline-block;
 }
-.main .content .travels .time-content {
-	margin-left: 15px;
-	float: left;
-}
+
 .main .content .travels .time-content p {
 	margin-top: 12px;
 	color: #aaa;
 }
 .main .content .travels .time-content-inner {
 	background-color: #fff;
-	padding: 10px;
 }
 .main .content .travels .time-content-inner h4 {
-	margin-bottom: 10px;
+	line-height: 40px;
+	padding-left: 23px;
 }	
+.main .content .travels .img-wrapper {
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+}
 .main .content .travels .img-wrapper img {
 	width: 200px;
 	height: 150px;
 	display: inline-block;
-	margin-right: 10px;
+	border:none;
 }
+
 /***媒体查询***/
 @media (min-width: 768px)  {
 	.main .navbar-nav > li > a {
