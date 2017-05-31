@@ -1,10 +1,33 @@
 package com.mysite.controller;
 
+import java.io.IOException;
+import java.io.Writer;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.mysite.service.UserService;
 
 @Controller
-@RequestMapping(value = "/user")
+@RequestMapping(value = "user")
 public class UserController {
 
+	@Resource
+	private UserService userService;
+
+	@RequestMapping(value = "register", method = RequestMethod.GET)
+	public void register(HttpServletResponse response) {
+
+		try {
+			Writer writer = response.getWriter();
+			writer.write("this is my register!");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
