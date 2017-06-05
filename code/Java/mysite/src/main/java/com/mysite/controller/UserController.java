@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mysite.service.UserService;
 
+/**
+ * @author suhan
+ * @category userController 负责用户的注册，信心完善
+ */
 @Controller
 @RequestMapping(value = "user")
 public class UserController {
