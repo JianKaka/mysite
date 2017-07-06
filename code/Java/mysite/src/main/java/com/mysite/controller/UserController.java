@@ -23,7 +23,7 @@ public class UserController {
 	@Resource
 	private UserService userService;
 
-	@RequestMapping(value = "register", method = RequestMethod.GET)
+	@RequestMapping(value = "register", method = RequestMethod.POST)
 	public void register(HttpServletResponse response) {
 
 		try {
