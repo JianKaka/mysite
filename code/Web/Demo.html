@@ -5,6 +5,7 @@
 <title>Bootstrap</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
+<<<<<<< HEAD
     
 </style>
 </head>
@@ -27,6 +28,105 @@
                 console.log("执行结束");
             });
     })
+=======
+ul , li {margin: 0 ; padding: 0}
+   .drop-down-dia {
+        position: relative;
+        display: inline-block;
+        margin-left: 50px;
+        margin-top: 50px;
+   }
+    .drop-down-dia ul {
+        width: 280px;
+        height: 230px;
+        overflow-y: hidden;
+        background-color: yellow;
+    }
+    .drop-down-dia ul li {
+        list-style: none;
+        line-height: 30px;
+    }
+    .drop-down-dia ul li:hover {
+        background-color: #ddd ;
+    }
+    .scroll-bar-box {
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        border-radius: 5px;
+        top: 0px; 
+        right: 0px;
+        background-color: #ddd;
+    }
+    .scroll-bar-box .scroll-bar {
+        height: 100px;
+        background-color: #000;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class='drop-down-dia'>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+        </ul>
+        <div class='scroll-bar-box'>
+            <div class='scroll-bar'></div>
+        </div>
+    </div>
+
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    
+    var down = false ;
+    var downY = 0 ;
+    var scrollHeight = 0 ;
+
+   // 鼠标进入
+   $(".scroll-bar").mouseover(function (e) {
+       down = false ;
+       scrollHeight = $('ul')[0].scrollHeight ;
+   });
+
+   $(".scroll-bar").mousedown(function (e) {
+        down = true ;
+        downY = e.clientY ;
+   });
+
+   $(".scroll-bar").mousemove(function (e) {
+        if(down) {
+            var mt = parseInt($(e.target).css('margin-top'));
+            var distance = e.clientY - downY ;
+            mt = mt + distance ;
+            if(mt >= 0 && mt <= 130) {
+                $(e.target).css({ 
+                    'margin-top': mt + 'px'
+                });
+                $('ul').scrollTop( $('ul').scrollTop() + distance);
+            }
+            downY = e.clientY ;
+        }
+   });
+   $(".scroll-bar").mouseup(function (e) {
+        down = false ;
+   });
+   // 鼠标移除
+   $(".scroll-bar").mouseout(function (e) {
+        down = false ;
+   });
+>>>>>>> 2e06ccf4d90b5122d461bc0c636c207f8050a4a0
 
 </script>
 </body>

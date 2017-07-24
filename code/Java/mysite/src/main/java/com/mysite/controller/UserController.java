@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mysite.service.UserService;
 
+/**
+ * @author suhan
+ * @category userController 负责用户的注册，信心完善
+ */
 @Controller
 @RequestMapping(value = "user")
 public class UserController {
@@ -19,7 +23,7 @@ public class UserController {
 	@Resource
 	private UserService userService;
 
-	@RequestMapping(value = "register", method = RequestMethod.GET)
+	@RequestMapping(value = "register", method = RequestMethod.POST)
 	public void register(HttpServletResponse response) {
 
 		try {
